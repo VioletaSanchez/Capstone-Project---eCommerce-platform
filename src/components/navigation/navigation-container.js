@@ -46,23 +46,12 @@ const NavigationComponent = (props) => {
                 <div className="nav-link-wrapper">
                     <NavLink to="/contact" activeClassName="nav-link-active">Contact</NavLink>
                 </div>
-                {/*
-                <div className="nav-link-wrapper">
-                    <NavLink to="/blog" activeClassName="nav-link-active">Blog</NavLink>
-                </div> 
-                Blog no longer used **** */}
+
                 {props.loggedInStatus === "LOGGED_IN" ? (dynamicLink("/portfolio-manager", "Product Manager")) : null} {/* Gotta change names here **** */}
-            </div>
-
-            <div className="right-side">
+                
                 <div className="nav-link-wrapper">
-                    {props.loggedInStatus === "LOGGED_IN" ? <a onClick={handleSingOut}>
-                        LOG OUT { /* <FontAwesomeIcon icon="sign-out-alt" /> */}
-                    </a> : null}
+                    {props.loggedInStatus === "LOGGED_IN" ? <a onClick={handleSingOut}>LOG OUT</a> : null}
                 </div>
-
-                
-                
             </div>
          </div>
     );

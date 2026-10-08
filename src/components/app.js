@@ -8,8 +8,6 @@ import Home from './pages/home'; // This is the og home. It will be renamed to p
 import home2 from './pages/home2';
 import About from './pages/about';
 import Contact from './pages/contact';
-import Blog from './pages/blog';
-import BlogDetail from './pages/blog-detail';
 import PortfolioDetail from "./portfolio/portfolio-detail";
 import PortfolioManager from "./pages/portfolio-manager";
 import Auth from "./pages/auth";
@@ -113,23 +111,6 @@ export default class App extends Component {
                 <Route path="/about-us" component={About} />
                 <Route path="/contact" component={Contact} />
 
-
-                <Route
-                    path="/blog"
-                    render={props => (
-                        <Blog {...props} loggedInStatus={this.state.loggedInStatus} />
-                    )}
-                />
-
-                <Route
-                    path="/b/:slug"
-                    render={props => (
-                    <BlogDetail
-                    {...props}
-                    loggedInStatus={this.state.loggedInStatus}
-                  />
-                )}
-              />
               {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
               <Route exact path="/product/:slug" component={PortfolioDetail} /* **** Here is the thingy for the product website *//>
               <Route component={NoMatch} />
