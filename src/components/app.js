@@ -4,8 +4,8 @@ import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PortfolioContainer from './portfolio/portfolio-container';
 import NavigationContainer from './navigation/navigation-container';
-import Home from './pages/home'; // This is the og home. It will be renamed to products
-import home2 from './pages/home2';
+import Portfolio from './pages/portfolio'; // This is the og home. It will be renamed to products
+import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';
 import PortfolioDetail from "./portfolio/portfolio-detail";
@@ -77,11 +77,11 @@ export default class App extends Component {
     this.checkLoginStatus();
   }
 
-  authorizedPages() {
-    return [
-      <Route key="porfolio-manager" path="/portfolio-manager" component={PortfolioManager} />
-    ];
-  }
+    authorizedPages() {
+        return [
+            <Route key="porfolio-manager" path="/portfolio-manager" component={PortfolioManager} />
+        ];
+    }
 
   render() {
     return (
@@ -94,8 +94,8 @@ export default class App extends Component {
             />
 
             <Switch>
-                
                 <Route exact path="/" component={Home} />
+                <Route exact path="/product" component={Portfolio} />
 
                 <Route
                     path="/login"
@@ -107,7 +107,7 @@ export default class App extends Component {
                 )}
                 />
             
-                <Route path="/home2" component={home2} />
+                
                 <Route path="/about-us" component={About} />
                 <Route path="/contact" component={Contact} />
 

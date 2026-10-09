@@ -1,11 +1,11 @@
 import React from "react";
 
-import PortfolioContainer from "../portfolio/portfolio-container";
+import CarrouselContainer from "../portfolio/carrousel-container";
 
 export default function() {
     return (
         <div>
-            <PortfolioContainer />
+            <CarrouselContainer />
         </div>
-        );
+    );
 }
