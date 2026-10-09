@@ -4,7 +4,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PortfolioContainer from './portfolio/portfolio-container';
 import NavigationContainer from './navigation/navigation-container';
-import Portfolio from './pages/portfolio'; // This is the og home. It will be renamed to products
+import Product from './pages/product'; // This is the og home. It will be renamed to products
 import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';
@@ -95,7 +95,7 @@ export default class App extends Component {
 
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/product" component={Portfolio} />
+                <Route exact path="/product" component={Product} />
 
                 <Route
                     path="/login"
